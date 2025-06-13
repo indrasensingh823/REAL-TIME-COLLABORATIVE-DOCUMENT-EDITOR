@@ -1,0 +1,224 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+}
+
+.create-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  background-color: #fff;
+  color: #4facfe;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* App.css */
+
+/* Font Import (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Reset + Theme Colors */
+:root {
+  --primary-bg: linear-gradient(to right, #1a1a2e, #16213e);
+  --primary-color: #0f3460;
+  --accent-color: #e94560;
+  --light-color: #ffffff;
+  --input-bg: #2c2c54;
+  --border-radius: 12px;
+  --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Inter', sans-serif;
+  background: var(--primary-bg);
+  color: var(--light-color);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* client/src/pages/DocumentPage.css */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+
+.editor-wrapper {
+  height: 80vh;
+  background: #fff;
+  overflow-y: auto;
+}
+
+
+.ql-editor {
+  height: 100%;
+}
+
+.editor-wrapper {
+  height: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.button {
+  margin: 0 10px;
+  padding: 10px 18px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(118, 75, 162, 0.4);
+}
+
+/* App Container */
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
+}
+
+/* Editor Section */
+.editor-wrapper {
+  background: var(--input-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.editor-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+}
+
+/* Quill Editor */
+.ql-toolbar {
+  background-color: #1e272e !important;
+  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+  border: none !important;
+}
+
+.ql-container {
+  border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+  background: #2f3542;
+  color: white;
+  min-height: 300px;
+}
+
+.ql-editor {
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+.button {
+  background: var(--accent-color);
+  color: white;
+  padding: 10px 25px;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background: #ff5e7d;
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow);
+}
+
+/* Fade Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .editor-wrapper {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,87 @@
+.planner-container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  background: #02678f;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.planner-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4a90e2;
+}
+
+.input-section,
+.search-section,
+.export-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.input-section input,
+.search-section input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1 1 180px;
+}
+
+.input-section button,
+.export-buttons button {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-section button:hover,
+.export-buttons button:hover {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+.events-list {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-item span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.event-item button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.event-item button:hover {
+  color: #c0392b;
+}
+
+.export-buttons button {
+  flex: 1 1 120px;
+}
