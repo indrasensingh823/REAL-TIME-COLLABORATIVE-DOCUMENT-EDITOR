@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 📝 Real-Time Document Collaboration App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **MERN (MongoDB, Express, React, Node.js)** based **Real-Time Document Collaboration App** powered by **Socket.io** and **Quill.js**.  
+Users can:
+- Collaborate on documents in real-time
+- Create and edit rich text documents
+- Use pre-made templates (resume, letter, invoice, etc.)
+- Download documents as PDF or TXT
+- Analyze text with word counter
+- Manage personal tasks with a planner
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+✅ Real-time collaboration between multiple users  
+✅ Rich text editing with Quill  
+✅ MongoDB-based persistent document storage  
+✅ Templates library (resume, letter, report, etc.)  
+✅ Word counter / analyzer with reading time  
+✅ Planner / calendar to track tasks (localStorage)  
+✅ Export as PDF / TXT  
+✅ Responsive and clean UI  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📂 Project Structure
 
-### `npm test`
+Real-time-doc-collab-app/
+├── client/ # React frontend
+│ ├── src/
+│ │ ├── App.js
+│ │ ├── index.js
+│ │ ├── pages/
+│ │ │ ├── Home.js
+│ │ │ ├── Editor.js
+│ │ │ ├── Templates.js
+│ │ │ ├── WordCounter.js
+│ │ │ ├── Planner.js
+│ └── public/
+├── server/ # Express + Socket.io + MongoDB backend
+│ └── index.js
+├── README.md
+└── package.json (root if mono-repo setup)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚡ Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Clone repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd Real-time-doc-collab-app
+```
+## Backend setup
+```bash
+cd server
+npm install
+node index.js
+```
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend setup
+```bash
+cd ../client
+npm install
+npm start
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Frontend: React, Quill.js, React Router, HTML2PDF
+- Backend: Node.js, Express, Socket.io
+- Database: MongoDB + Mongoose
+- Other: LocalStorage, HTML2PDF, FileSaver
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+This project is open source under the MIT License.
 
-## Learn More
+## Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Quill.js
+- Socket.io
+- React
+- Express
+- MongoDB Atlas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+✉️ Contact
+Feel free to contribute or report issues!
+🌟 GitHub: indrasensingh823
+📧 Email: indrasensingh823gkp@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
