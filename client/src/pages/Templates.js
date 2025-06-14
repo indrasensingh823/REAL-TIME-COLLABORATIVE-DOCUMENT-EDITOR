@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Quill from 'quill';
 import html2pdf from 'html2pdf.js';
 import 'quill/dist/quill.snow.css';
