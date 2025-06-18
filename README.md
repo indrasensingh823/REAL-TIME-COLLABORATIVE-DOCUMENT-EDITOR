@@ -22,8 +22,9 @@ The app also includes intelligent document handling, automatic saving, and uniqu
 
 ## 📸 Screenshot
 
-![Image](https://github.com/user-attachments/assets/01cb791d-7b43-481d-a561-93c1ac1cf311)
-![Image](https://github.com/user-attachments/assets/8a92dab0-473c-4f4e-8e3a-ba7388b11e3c)
+![Image](https://github.com/user-attachments/assets/09c95389-ca92-4d56-9036-26a0c4ad2f72)
+
+![Image](https://github.com/user-attachments/assets/be5bb3a8-696b-41f2-891c-53726be62b39)
 
 
 ---
