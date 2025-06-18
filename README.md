@@ -11,7 +11,12 @@
 
 ---
 
-A powerful and responsive web application that allows multiple users to collaboratively edit documents in real-time, similar to Google Docs. Built using **React**, **Node.js**, **Socket.io**, and **Express**.
+A **Real-Time Collaborative Document Editor** is an advanced, feature-rich web application designed to enhance productivity by enabling multiple users to create, view, and edit documents together in real-time. This app replicates the core functionality of platforms like Google Docs but provides a lightweight and customizable solution for teams, students, and professionals. 
+
+The frontend is developed using **React.js**, delivering a smooth and responsive user interface, while the backend is powered by **Node.js** and **Express.js** for robust server-side logic. **Socket.IO** is used to establish real-time bidirectional communication between users, ensuring that every keystroke or formatting change is instantly reflected for all collaborators. This live collaboration experience significantly improves workflow, especially in academic, corporate, or remote working environments.
+
+The app also includes intelligent document handling, automatic saving, and unique document ID routing for easy sharing. Whether you're drafting reports, notes, or letters, this tool empowers users to collaborate from anywhere — seamlessly and securely.
+
 
 ---
 
@@ -56,24 +61,51 @@ cd real-time-doc-editor
 ```
 
 
----
-**COMPANY**: CODTECH IT SOLUTIONS  
-**NAME**: INDRASEN SINGH  
-**INTERN ID**: CT04DN1461
-**DOMAIN**: FRONT END DEVELOPMENT  
-**DURATION**: 4 WEEKS  
-**MENTOR**: NEELA SANTOSH  
+### 2. Install Dependencies
+Server:
+```bash
+cd server
+npm install
+```
+
+Client:
+```bash
+cd ../client
+npm install
+```
+
+
+### 3. Environment Variables
+Create a .env file inside the server directory with the following:
+```bash
+PORT=5002
+MONGO_URI=your_mongodb_uri
+```
+
+
+### 4. Run the Application Locally
+In two terminals:
+```bash
+# Terminal 1
+cd server
+npm start
+
+# Terminal 2
+cd client
+npm start
+```
+The React app runs on http://localhost:3000
+The backend runs on http://localhost:5002
 
 ---
 
----
+## Learning Concepts
+- WebSockets and real-time data flow
+- State management with React Hooks
+- Server-client architecture
+- MongoDB data persistence
+- Deployment to Railway with environment variables
 
-## 📸 Screenshot
-
-![Image](https://github.com/user-attachments/assets/8a92dab0-473c-4f4e-8e3a-ba7388b11e3c)
-![Image](https://github.com/user-attachments/assets/01cb791d-7b43-481d-a561-93c1ac1cf311)
-
----
-
+  
 
 
