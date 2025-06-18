@@ -1,5 +1,15 @@
 # 📝 Real-Time Document Collaboration App
 
+---
+**COMPANY**: CODTECH IT SOLUTIONS  
+**NAME**: INDRASEN SINGH  
+**INTERN ID**: CT04DN1461
+**DOMAIN**: FRONT END DEVELOPMENT  
+**DURATION**: 4 WEEKS  
+**MENTOR**: NEELA SANTOSH  
+
+---
+
 This is a **MERN (MongoDB, Express, React, Node.js)** based **Real-Time Document Collaboration App** powered by **Socket.io** and **Quill.js**.  
 Users can:
 - Collaborate on documents in real-time
@@ -10,6 +20,14 @@ Users can:
 - Manage personal tasks with a planner
 
 ---
+
+## 📸 Screenshot
+
+![Image](https://github.com/user-attachments/assets/73638f2e-22f7-4e21-addb-815efa704083)
+
+---
+
+
 
 ## 🚀 Features
 
