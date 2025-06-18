@@ -3,6 +3,7 @@ import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 import { io } from 'socket.io-client';
 import jsPDF from 'jspdf';
+import '../styles/Editor.css'; // Create this new CSS file
 
 const SAVE_INTERVAL_MS = 2000;
 const TOOLBAR_OPTIONS = [
@@ -28,7 +29,7 @@ export default function DocumentPage() {
   const documentId = window.location.pathname.split('/')[2];
 
   useEffect(() => {
-    const s = io('http://localhost:5002'); // ✅ Your server port
+    const s = io('http://localhost:5002');
     socketRef.current = s;
 
     const editorContainer = document.createElement('div');
@@ -39,8 +40,6 @@ export default function DocumentPage() {
       theme: 'snow',
       modules: { toolbar: TOOLBAR_OPTIONS },
     });
-    // q.disable();
-    // q.setText('Loading document...');
     quillRef.current = q;
 
     s.once('load-document', (document) => {
@@ -72,7 +71,7 @@ export default function DocumentPage() {
   const handleSave = () => {
     if (socketRef.current && quillRef.current) {
       socketRef.current.emit('save-document', quillRef.current.getContents());
-      alert('Document Saved!');
+      showNotification('Document saved successfully!');
     }
   };
 
@@ -86,6 +85,7 @@ export default function DocumentPage() {
     a.download = `document-${documentId}.txt`;
     a.click();
     URL.revokeObjectURL(url);
+    showNotification('Text file exported!');
   };
 
   const handleExportPdf = () => {
@@ -95,26 +95,37 @@ export default function DocumentPage() {
     const lines = pdf.splitTextToSize(text, 180);
     pdf.text(lines, 15, 20);
     pdf.save(`document-${documentId}.pdf`);
+    showNotification('PDF exported!');
+  };
+
+  const showNotification = (message) => {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    setTimeout(() => {
+      notification.classList.add('fade-out');
+      setTimeout(() => notification.remove(), 300);
+    }, 2000);
   };
 
   return (
-    <div style={{ margin: 50 }}>
-      <div style={{ marginBottom: 20 }}>
-        <button onClick={handleSave} style={btnStyle}>💾 Save</button>
-        <button onClick={handleExportTxt} style={btnStyle}>📤 Export TXT</button>
-        <button onClick={handleExportPdf} style={btnStyle}>📝 Export PDF</button>
+    <div className="document-container">
+      <div className="document-header">
+        <h2 className="document-title">Editing Document: <span>{documentId}</span></h2>
+        <div className="document-actions">
+          <button onClick={handleSave} className="action-btn save-btn">
+            <span className="btn-icon">💾</span> Save
+          </button>
+          <button onClick={handleExportTxt} className="action-btn export-btn">
+            <span className="btn-icon">📤</span> Export TXT
+          </button>
+          <button onClick={handleExportPdf} className="action-btn export-btn">
+            <span className="btn-icon">📝</span> Export PDF
+          </button>
+        </div>
       </div>
-      <div className="container" ref={editorRef} />
+      <div className="editor-container" ref={editorRef} />
     </div>
   );
 }
-
-const btnStyle = {
-  marginRight: 10,
-  padding: '10px 20px',
-  backgroundColor: '#1a73e8',
-  color: 'white',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-};
