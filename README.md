@@ -107,5 +107,32 @@ The backend runs on http://localhost:5002
 - Deployment to Railway with environment variables
 
   
+---
+
+## ✉️ Contact
+
+Feel free to contribute, report issues, or suggest new features!
+
+- 🌟 GitHub: [indrasensingh823](https://github.com/indrasensingh823)
+- 📧 Email: indrasensingh823@gmail.com
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgements
+
+- [Quill.js](https://quilljs.com/) - For the rich text editor.
+- [Socket.IO](https://socket.io/) - For real-time communication.
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) - For cloud-based document storage.
+- [Railway.app](https://railway.app/) - For simplified full-stack deployment.
+
+---
+
+> Made with ❤️ by Indrasen Singh
 
 
